@@ -1,0 +1,33 @@
+.input-div{
+    
+    width: 100%;
+    /* background-color: wheat; */
+    text-align: center;    
+    margin-top: 110px;
+}
+.input-div p{
+color: #ecf0f1;
+font-size: 24px;
+}
+.input-div input{
+    display: inline;
+    width: 70%;
+    border: 4px solid black;
+    color: #27ae60;
+    font-size: 26px;
+}
+.input-div button{
+    margin-top: 30px;
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    width: 110px;
+    height: 45px;
+    outline: none;
+    border: none;
+    font-size:20px;
+    font-weight: bold;
+}
+.input-div button:focus{
+    background-color: red;
+
+}
