@@ -11,7 +11,7 @@ export default function MenuBar(props) {
       document.querySelector(".menubox ul").style.left = "0vw";
     } else {
       document.getElementsByClassName("menubox")[0].style.width = "0vw";
-      document.querySelector(".menubox ul").style.left = "-61vw";
+      document.querySelector(".menubox ul").style.left = "-63.5vw";
     }
     setMenuboxToggle(!menuboxToggle);
   }
