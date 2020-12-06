@@ -22,8 +22,8 @@ export default function inputName(props) {
     return (
     <>
         <div className="input-div">
-            <p>Enter your name fro better experince</p>
-            <input type="text" onChange={inputaValue}/><br />
+            <p>Enter your name for better experince</p>
+            <input type="text" placeholder="Enter your name" onChange={inputaValue}/><br />
             <button onClick={submitData}>Enter</button>
             {/* <button onClick={()=>{localStorage.clear()}}>Clear localStorage</button> */}
         </div>

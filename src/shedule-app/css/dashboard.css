@@ -4,15 +4,17 @@
     padding: 0;
     margin: 0;
 }
-.dashboard-div .name{
+
+.dashboard-div .name {
     text-align: center;
     color: #bdc3c7;
     font-size: 17px;
     padding: 0;
     margin: 5px 0;
     margin-bottom: 15px;
-    
+
 }
+
 .dashboard-list {
     margin: 0 0 0 15px;
     padding: 0;
@@ -50,6 +52,7 @@
     border-bottom: .1px solid #ecf0f1;
     height: 52px;
     display: flex;
+    color: #2c3e50;
     justify-content: space-between;
     align-items: center;
     font-size: 22px;
@@ -63,18 +66,20 @@
 .dashboard-list li span b,
 .dashboard-list li span img {
     justify-items: right;
+    color: rgb(14, 12, 12);
 }
 
 .back-cross {
-    /* border: 1px solid white; */
     width: 99%;
     position: absolute;
     top: 7%;
     /* left: 80%; */
     text-align: right;
 }
-
-.back-cross span {
+.back-cross div{
+    display: inline-block;
+}
+.back-cross div span {
     /* position: relative; */
     display: inline-block;
     width: 18px;
@@ -82,14 +87,14 @@
     margin: 0 3.5px;
 }
 
-.back-cross span:first-child {
+.back-cross div span:first-child {
     border: 1px solid white;
     border-left: none;
     border-bottom: none;
     transform: rotate(45deg);
 }
 
-.back-cross span:nth-child(2) {
+.back-cross div span:nth-child(2) {
     border: 1px solid white;
     border-right: none;
     border-bottom: none;
@@ -114,5 +119,12 @@
 
     .dashboard-list li {
         width: 90%;
+    }
+
+    .back-cross {
+        width: 63%;
+    }
+    .back-cross div:hover, .dashboard-div p span{
+        cursor: pointer;
     }
 }

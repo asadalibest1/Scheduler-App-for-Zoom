@@ -36,13 +36,16 @@ export default function Dashboard(props) {
     }
     return (
         <div className="dashboard-div">
-            <MenuBar sheduleData={sheduleData} />
+            <MenuBar sheduleData={sheduleData} condition={props.condition} name={props.name} />
             <h1>Dashboard ({Data.day})</h1>
-            <div onClick={() => { props.condition(1) }} className="back-cross">
+            <div  className="back-cross">
+                <div onClick={() => { props.condition(1) }}>
                 <span></span>
                 <span></span>
+                </div>
             </div>
-            <p className="name">Salam {props.name},<br />Hope you are taking your classes<br />properly. Have a Bright Future.</p>
+            <p className="name"><span onClick={() => { localStorage.clear(); props.condition(0) }}>
+                Assalamu alaikum {props.name}</span>,<br />Hope you are taking your classes<br />properly. Have a Bright Future.</p>
             <ul className="dashboard-list">
 
                 {
@@ -53,7 +56,12 @@ export default function Dashboard(props) {
                                 <span>Subject<b>{item.Subject}</b></span>
                                 <span>Host<b>{item.Host}</b></span>
                                 <span>Timing<b>{item.Timing}</b></span>
-                                <span>Zoom<img onClick={() => { window.open(item.link) }} src={require("../images/zoom.jpg")} alt="zoom" /></span>
+                                <span>Zoom<img onClick={
+                                    () => {
+                                        (item.link !== "#") ? window.open(item.link) :
+                                        alert("Dear user, I didn't found this zoom link, So I am unable to schedule this link. In the future, I will try to solve this issue.")
+                                        }
+                                } src={require("../images/zoom.jpg")} alt="zoom" /></span>
                             </li>
                         )
                     })
