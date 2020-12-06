@@ -31,7 +31,7 @@ export default function App() {
     
     return (
         <div>
-            <h1 className="main-header">Shedule App</h1>
+            <h1 className="main-header">Zoom Scheduler</h1>
             {(condition === 0) ? <InputName getName={getName} condition={changeCondition} /> : false}
             {(condition === 1) ? <ChooseSec classSection={classSection} condition={changeCondition} /> : false}
             {(condition === 2) ? <Dashboard classSec={classSec} name={name} condition={changeCondition} /> : false}
