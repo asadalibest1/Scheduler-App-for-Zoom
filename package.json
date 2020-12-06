@@ -1,5 +1,4 @@
 {
-  "homepage": "https://asadalibest1.github.io/Web-Animation-Api-with-Hooks",
   "name": "web-animation-api-with-hooks",
   "version": "0.1.0",
   "private": true,
@@ -17,8 +16,6 @@
     "surge": "^0.21.6"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
