@@ -2,20 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import "./index.css";
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router } from "react-router-dom";
 
-// first-pwa-91847
-// import App from './prac/App';
-// import App from './responsive font/App';
-// import App from './animation-app/App';
-
-// import App from './trans-group-comp/index';
 import App from './shedule-app/App';
-// import App from './trans-group-comp2/App';
-// import App from './animationWithHooks/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

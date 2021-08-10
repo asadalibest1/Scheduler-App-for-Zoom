@@ -1,29 +1,28 @@
 .menubox {
     background: black;
-    height: 84.7vh;
-    width: 0vw;
+    /* height: 100%; */
     transition: all .5s;
     position: absolute;
     z-index: 1;
+    width: 0px;
 }
 
 .UserName {
     font-family: 'Pacifico', cursive;
     color: white;
     font-size: 26px;
-    text-align: center;
     font-weight: bold;
-    padding-left: 35%;
-    position: relative;
-    top: -25px;
-    cursor: pointer;
+    width: 100%;
 }
 
+.menubox i:hover{
+    cursor: pointer;
+}
 .menubox ul {
     position: relative;
-    width: 50vw;
+    width: 90%;
     left: -63.5vw;
-    margin-top: 10vh;
+    margin-top: 6vh;
     transition: all .5s;
 
 }
@@ -38,20 +37,19 @@
     cursor: pointer;
 }
 
-.menubox ul div {
+.menubox div {
     /* border: 1px solid white; */
     width: 100%;
+    /* height: 100%; */
     text-align: center;
-    padding-top: 15px;
-    padding-left: 15%;
 }
 
-.menubox ul div img {
+.menubox div img {
     width: 40px;
     height: 40px;
     margin: 0 6px;
 }
-.menubox ul div img:nth-child(3) {
+.menubox div img:nth-child(3) {
     position: relative;
     top: 3px;
     margin: 0 3px;
@@ -65,13 +63,14 @@
         top: 13vh;
         left: 0;
         height: 89vh;
+        width: 0vw;
     }
 
     .menubox ul {
         position: relative;
         width: 50vw;
         left: -61vw;
-        margin-top: 12vh;
+        margin-top: 8vh;
         transition: all .5s;
 
     }
@@ -82,14 +81,14 @@
     }
 
     .menubox ul li {
-        margin: 40px 0;
+        margin: 25px 0;
 
     }
 
     .menubox ul li:hover {
         font-size: 26px;
         color: red;
-        transition: all .4s;
+        transition: all .4s ease-in-out;
     }
 
     .menubox ul div img {

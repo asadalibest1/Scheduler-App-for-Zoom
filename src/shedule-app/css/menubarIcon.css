@@ -14,6 +14,7 @@
   margin: 5px 0px 0px 0px;
   transition: 0.7s ease-in-out;
   transform: none;
+  position: relative;
 }
 
 #openmenu:checked~.menu-pane {
@@ -23,11 +24,15 @@
 
 #openmenu:checked~.hamburger-icon span:nth-of-type(2) {
   transform: translate(0%, 175%) rotate(-45deg);
+  /* top: -5px; */
+  left: 0.3px;
   background-color: white;
 }
 
 #openmenu:checked~.hamburger-icon span:nth-of-type(3) {
   transform: rotate(45deg);
+  top: -2px;
+  /* left: 1px; */
   background-color: white;
 }
 
@@ -42,7 +47,7 @@ input.hamburger-checkbox {
 
   position: absolute;
   /* z-index: 3; */
-  top: 5vh;
+  top: vh;
   left: 5vw;
   width: 10vw;
   opacity: 0;

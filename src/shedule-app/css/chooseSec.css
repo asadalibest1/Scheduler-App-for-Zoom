@@ -1,8 +1,12 @@
-.chooseSec h1{
+.chooseSec a:hover{
+    text-decoration: none;
+}
+.chooseSec h2{
     text-align: center;
     color: #bdc3c7;
     margin-bottom: 50px;
-}.classes{
+}
+.classes a{
     font-family: 'Pacifico', cursive;
     width: 150px;
     height: 70px;
@@ -16,9 +20,17 @@
     margin: 10px auto;
     color: #ce8d54;
 }
+.new-classes a{
+    background-color: #137bc0;
+}
 @media only screen and (min-width: 768px) {
-    .classes:hover{
+    .classes a:hover{
     background-color: #137bc0;
     cursor: pointer;
+    color: #ce8d54;
     }
+    .new-classes a:hover{
+        background-color: #3498db;
+    }
+
 }
