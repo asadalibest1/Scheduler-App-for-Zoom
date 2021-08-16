@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuBar from "./menuBar"
 import "../css/dashboard.css"
-import { Link, Redirect, useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function Dashboard({ classSection }) {
 

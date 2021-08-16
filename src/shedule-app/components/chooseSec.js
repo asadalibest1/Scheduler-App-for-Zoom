@@ -4,7 +4,7 @@ import "../css/chooseSec.css"
 
 export default function ChooseSec({ classSection }) {
 
-    let initialzeTimetable =  JSON.parse(localStorage.getItem('timetable'));
+    let initialzeTimetable = JSON.parse(localStorage.getItem('timetable'));
 
 
     const newClass = React.useRef();
@@ -20,6 +20,10 @@ export default function ChooseSec({ classSection }) {
 
     function saveClassEvent() {
         const _new = newClass.current.value
+
+        if(_new === ""){
+            return alert('Please enter a class name')
+        }
         initialzeTimetable = { ...initialzeTimetable, [_new]: [[], [], [], [], [], [], []] };
 
         localStorage.setItem("timetable", JSON.stringify(initialzeTimetable));
@@ -30,7 +34,7 @@ export default function ChooseSec({ classSection }) {
     function deleteClass() {
 
         const _Class = newClass.current.value;
-
+        
         if (Data[_Class]) {
 
             const ask = window.confirm(`Are you sure you want to delete ${_Class}`)
@@ -41,7 +45,7 @@ export default function ChooseSec({ classSection }) {
             }
 
         } else {
-            alert(`${_Class} is not available`)
+            alert(`${(_Class === "") ? 'Class' : _Class} is not available`)
         }
 
     }
@@ -59,48 +63,44 @@ export default function ChooseSec({ classSection }) {
 
                     <div className="classes new-classes"
                         data-toggle="modal" data-target="#add_new_class">
-                        <Link>
-                            Add Class
-                        </Link>
+                        Add Class
                     </div>
 
                     :
                     <>
-                        {Object.keys(Data).map((item, ind) => {
+                        {Object.keys(Data).map((item) => {
                             //    console.log(item)
-                            return <div className="classes" onClick={() => classSection(item)}>
-                                <Link to="/dashboard">
+                            return <Link to="/dashboard" key={item}>
+                                <div className="classes" onClick={() => classSection(item)}>
                                     {item}
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
 
                         })}
                         <div className="classes new-classes"
                             data-toggle="modal" data-target="#add_new_class">
-                            <Link>
-                                Edit
-                            </Link>
+                            Edit
                         </div>
                     </>
             }
 
-            <div class="modal fade" tabindex="-1" role="dialog" id="add_new_class">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Add new class</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div className="modal fade" tabIndex="-1" role="dialog" id="add_new_class">
+                <div className="modal-dialog modal-dialog-centered" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title">Add new class</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" ref={newClass} aria-label="Default" placeholder="Class" />
+                        <div className="modal-body">
+                            <div className="input-group mb-3">
+                                <input type="text" className="form-control" ref={newClass} aria-label="Default" placeholder="Class" />
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={saveClassEvent} >Save class</button>
-                            <button type="button" class="btn btn-secondary" onClick={deleteClass} data-dismiss="modal">Delete</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-danger" data-dismiss="modal" onClick={saveClassEvent} >Save class</button>
+                            <button type="button" className="btn btn-secondary" onClick={deleteClass} data-dismiss="modal">Delete</button>
                         </div>
                     </div>
                 </div>

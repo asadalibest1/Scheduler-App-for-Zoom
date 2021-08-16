@@ -18,10 +18,6 @@ export default function App() {
         localStorage.setItem("timetable", JSON.stringify({}));
     };
 
-
-
-    const [condition, setCondition] = React.useState(2)
-    // const [name, setName] = React.useState("")
     const [classSec, setClassSec] = React.useState(null)
 
     function classSection(section) {

@@ -50,18 +50,18 @@ export default function NewField({ num, setDelete, Delete, section, setRefresh, 
             <div hidden={toggle}>
 
 
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" ref={subject} aria-label="Default" placeholder="Subject" />
+                <div className="input-group mb-3">
+                    <input type="text" className="form-control" ref={subject} aria-label="Default" placeholder="Subject" />
                 </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" ref={host} aria-label="Default" placeholder="Host" />
+                <div className="input-group mb-3">
+                    <input type="text" className="form-control" ref={host} aria-label="Default" placeholder="Host" />
                 </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control mr-1" ref={startTiming} aria-label="Default" placeholder="Start Timing" />
-                    <input type="text" class="form-control ml-1" ref={endTiming} aria-label="Default" placeholder="End Timing" />
+                <div className="input-group mb-3">
+                    <input type="text" className="form-control mr-1" ref={startTiming} aria-label="Default" placeholder="Start Timing" />
+                    <input type="text" className="form-control ml-1" ref={endTiming} aria-label="Default" placeholder="End Timing" />
                 </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" ref={zLink} aria-label="Default" placeholder="Zoom Link" />
+                <div className="input-group mb-3">
+                    <input type="text" className="form-control" ref={zLink} aria-label="Default" placeholder="Zoom Link" />
                 </div>
 
                 <div className="text-center">

@@ -6,7 +6,7 @@
     color: #bdc3c7;
     margin-bottom: 50px;
 }
-.classes a{
+.classes {
     font-family: 'Pacifico', cursive;
     width: 150px;
     height: 70px;
@@ -20,17 +20,16 @@
     margin: 10px auto;
     color: #ce8d54;
 }
-.new-classes a{
+.new-classes {
     background-color: #137bc0;
 }
 @media only screen and (min-width: 768px) {
-    .classes a:hover{
+    .classes :hover{
     background-color: #137bc0;
     cursor: pointer;
     color: #ce8d54;
     }
-    .new-classes a:hover{
+    .new-classes :hover{
         background-color: #3498db;
     }
-
 }

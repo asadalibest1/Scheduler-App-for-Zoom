@@ -1,12 +1,9 @@
 import React from 'react'
-import MenuBar from "./menuBar"
 import "../css/dashboard.css"
 import NewField from './new';
-import { Link, useHistory, Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 export default function Edit({  classSection  }) {
-
-    const history = useHistory()
 
     const timetable = JSON.parse(localStorage.getItem('timetable'));
 
@@ -72,21 +69,21 @@ export default function Edit({  classSection  }) {
     return (
         <div className="dashboard-div mt-4 p-4">
 
-            <h3 class="text-white text-center">Customize Dashboard</h3>
+            <h3 className="text-white text-center">Customize Dashboard</h3>
 
 
-            <div class="dropdown mt-4 mb-2 text-center">
-                <button class="btn dropdown-toggle w-50" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div className="dropdown mt-4 mb-2 text-center">
+                <button className="btn dropdown-toggle w-50" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {daysName(days)}
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" onClick={() => setDays(0)}>Monday</a>
-                    <a class="dropdown-item" href="#" onClick={() => setDays(1)}>Theusday</a>
-                    <a class="dropdown-item" href="#" onClick={() => setDays(2)}>Wednesday</a>
-                    <a class="dropdown-item" href="#" onClick={() => setDays(3)}>Thursday</a>
-                    <a class="dropdown-item" href="#" onClick={() => setDays(4)}>Friday</a>
-                    <a class="dropdown-item" href="#" onClick={() => setDays(5)}>Saturday</a>
-                    <a class="dropdown-item" href="#" onClick={() => setDays(6)}>Sunday</a>
+                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a className="dropdown-item" href="#javascript" onClick={() => setDays(0)}>Monday</a>
+                    <a className="dropdown-item" href="#javascript" onClick={() => setDays(1)}>Theusday</a>
+                    <a className="dropdown-item" href="#javascript" onClick={() => setDays(2)}>Wednesday</a>
+                    <a className="dropdown-item" href="#javascript" onClick={() => setDays(3)}>Thursday</a>
+                    <a className="dropdown-item" href="#javascript" onClick={() => setDays(4)}>Friday</a>
+                    <a className="dropdown-item" href="#javascript" onClick={() => setDays(5)}>Saturday</a>
+                    <a className="dropdown-item" href="#javascript" onClick={() => setDays(6)}>Sunday</a>
                 </div>
             </div>
             <div className="text-white text-center mb-3">{timetable[myclass][ days ] ? timetable[myclass][ days ].length + " classes mentioned" : "No class found!"}</div>
@@ -102,7 +99,7 @@ export default function Edit({  classSection  }) {
                                 timetable[ myclass ][ days ].map((item, ind) => {
 
                                     return (
-                                        <div className="position-relative">
+                                        <div className="position-relative" key={item.id}>
 
                                             <button className="btn close-btn"
                                                 onClick={() => _delete(item.id)}
